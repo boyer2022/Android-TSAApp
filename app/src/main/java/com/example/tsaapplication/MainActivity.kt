@@ -30,6 +30,23 @@ class MainActivity : AppCompatActivity() {
             // Function for getting the arrow
             showRandomArrow()
         }
+
+        // When clicking on arrow to get back to "Tap Here" button
+        leftArrow.setOnClickListener {
+            // call to reset function
+            reset()
+        }
+        rightArrow.setOnClickListener {
+            // call to reset function
+            reset()
+        }
+    }
+
+    // Function to reset back to tapHereButton
+    private fun reset() {
+        leftArrow.visibility = View.INVISIBLE
+        rightArrow.visibility = View.INVISIBLE
+        tapHereButton.visibility = View.VISIBLE
     }
 
     private fun showRandomArrow() {
